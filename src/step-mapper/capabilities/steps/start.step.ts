@@ -1,4 +1,5 @@
 import { BaseStep } from './base.step';
+import { StepUtilities } from './utilities';
 
 
 export class StartStep extends BaseStep {
@@ -16,11 +17,21 @@ export class StartStep extends BaseStep {
 
         return this.next(property)
     }
+
     next(property: any) {
 
-        const new_stack = this.stack
+        const next_step_class = StepUtilities.get_next_step(this.stack)
 
-        console.log(new_stack)
+        const next_step = new next_step_class(
+            this.stack,
+            this.bag,
+            property,
+            this.converter,
+            this.target
+        )
+        if (next_step) return next_step.process()
+
+        throw new Error("Should Not start with Empty Object");
 
     }
 

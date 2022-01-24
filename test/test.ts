@@ -30,4 +30,12 @@ const mapper = new StepMapperLogic(input_data, mapping_definition)
 const modules = mapper.get_mapping_modules()
 const mappings = mapper.get_module_mappings(modules[0])
 
-console.log(mapper.process_module_mapping(modules[0], mappings[0]));
+const result = {}
+
+// for (const mapping of mappings) {
+//     mapper.process_module_mapping(modules[0], mapping, result)
+// }
+
+mapper.process_module_mapping(modules[1], mappings[0], result)
+
+console.log(result);

@@ -7,7 +7,8 @@ export abstract class BaseStep {
         protected stack: string[],
         protected bag: any = {},
         protected prop: any,
-        protected converter: TargetTypes
+        protected converter: TargetTypes,
+        protected target: any
     ) { }
 
     abstract get_value(): any;

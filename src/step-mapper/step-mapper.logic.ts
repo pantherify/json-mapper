@@ -10,6 +10,7 @@ export class StepMapperLogic {
         private definitions: MappingDefinition
     ) { }
 
+    private get_naming_path = (module: string, mapping: string) => `${module}.${mapping}`
 
     // Get List of Modules to be mapped
     public get_mapping_modules(): string[] {
@@ -21,7 +22,7 @@ export class StepMapperLogic {
         return Object.keys(this.definitions.mappings[module])
     }
 
-    public process_module_mapping(module: string, mapping: string) {
+    public process_module_mapping(module: string, mapping: string, bag: any = {}) {
 
         const target = this.definitions.mappings[module][mapping]
         const converter = TargetUtilities.get_target_class(target)
@@ -32,10 +33,17 @@ export class StepMapperLogic {
             steps,
             {},
             this.input_data,
-            converter
+            converter,
+            target
         )
 
-        return start.process()
+        const naming_path = this.get_naming_path(module, mapping)
+        const naming = this.definitions.namings[naming_path]
+
+        const { output } = start.process()
+        bag[naming.to] = output
+
+        return bag
     }
 
 }
