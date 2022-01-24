@@ -15,6 +15,6 @@ export abstract class BaseStep {
 
     abstract process(): any;
 
-    abstract next(property: any): any;
+    abstract next(property: any): { output: any };
 
 }

@@ -39,4 +39,6 @@ const result = {}
 
 mapper.process_module_mapping(_module, mappings[0], result)
 
-console.log(result);
+console.dir(result, {
+    depth: 3
+});

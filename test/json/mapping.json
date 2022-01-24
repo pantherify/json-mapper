@@ -18,7 +18,17 @@
             ],
             "prop_5": [
                 "number"
-            ]
+            ],
+            "prop_6[].prop_1": "string",
+            "prop_6[]": {
+                "prop_1": "string",
+                "prop_3": "number"
+            },
+            "prop_6[].prop_6[].prop_1": "string",
+            "prop_6[].prop_6[]": {
+                "prop_1": "string",
+                "prop_3": "string"
+            }
         }
     },
     "namings": {
@@ -45,16 +55,28 @@
         "demo-module|demo2.prop_4": {
             "to": "prop_3",
             "actions": [
-                "merge",
                 "unique"
             ]
         },
         "demo-module|demo2.prop_5": {
             "to": "prop_3",
-            "actions": [
-                "merge",
-                "unique"
-            ]
+            "actions": []
+        },
+        "demo-module|demo2.prop_6[].prop_1": {
+            "to": "prop_5",
+            "actions": []
+        },
+        "demo-module|demo2.prop_6[]": {
+            "to": "prop_6",
+            "actions": []
+        },
+        "demo-module|demo2.prop_6[].prop_6[].prop_1": {
+            "to": "inner_arrays",
+            "actions": []
+        },
+        "demo-module|demo2.prop_6[].prop_6[]": {
+            "to": "inner_objects",
+            "actions": []
         }
     }
 }

@@ -1,6 +1,8 @@
+import { ActionUtilities } from './capabilities/actions/utilities';
 import { StartStep } from './capabilities/steps/start.step';
 import { TargetUtilities } from './capabilities/targets/utilities';
 import { MappingDefinition } from './models/mapping-definition.model';
+import { NamingProp } from './models/naming-prop.model';
 
 
 export class StepMapperLogic {
@@ -9,8 +11,6 @@ export class StepMapperLogic {
         private input_data: any,
         private definitions: MappingDefinition
     ) { }
-
-    private get_naming_path = (module: string, mapping: string) => `${module}.${mapping}`
 
     // Get List of Modules to be mapped
     public get_mapping_modules(): string[] {
@@ -40,10 +40,35 @@ export class StepMapperLogic {
         const naming_path = this.get_naming_path(module, mapping)
         const naming = this.definitions.namings[naming_path]
 
-        const { output } = start.process()
+        let { output } = start.process()
+
+        if (naming.actions.length) output = this.run_actions(naming, output)
+
+
         bag[naming.to] = output
 
         return bag
+    }
+
+    private get_naming_path = (module: string, mapping: string) => `${module}.${mapping}`
+
+    private run_actions(naming: NamingProp, input: any): any {
+
+        let result = input
+
+        for (const _action of naming.actions) {
+            const action_class = ActionUtilities.get_action_class(_action)
+            const action = new action_class(result)
+
+            if (!action.input_valid())
+                throw new Error("Action Not Valid for this type of object");
+
+
+            result = action.run()
+        }
+
+        return result
+
     }
 
 }

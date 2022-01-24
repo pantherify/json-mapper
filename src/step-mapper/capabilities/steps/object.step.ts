@@ -14,7 +14,7 @@ export class ObjectStep extends BaseStep {
 
         return this.next(property)
     }
-    next(property: any) {
+    next(property: any): { output: any } {
 
         const next_stack = this.stack.slice(1)
         const next_step_class = StepUtilities.get_next_step(next_stack)
