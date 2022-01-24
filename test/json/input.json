@@ -1,0 +1,23 @@
+{
+    "demo-module|demo": {
+        "prop_1": 1,
+        "prop_2": "1",
+        "prop_3": {
+            "prop_1": 1
+        }
+    },
+    "demo-module|demo2": {
+        "prop_4": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "prop_5": [
+            5,
+            6,
+            7,
+            1
+        ]
+    }
+}

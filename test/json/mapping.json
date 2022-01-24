@@ -1,0 +1,40 @@
+{
+    "mappings": {
+        "demo-module|demo": {
+            "prop_1": "number",
+            "prop_2": "string"
+        },
+        "demo-module|demo2": {
+            "prop_4": [
+                "number"
+            ],
+            "prop_5": [
+                "number"
+            ]
+        }
+    },
+    "namings": {
+        "demo-module|demo.prop_1": {
+            "to": "prop_1",
+            "actions": []
+        },
+        "demo-module|demo.prop_2": {
+            "to": "prop_2",
+            "actions": []
+        },
+        "demo-module|demo2.prop_4": {
+            "to": "prop_3",
+            "actions": [
+                "merge",
+                "unique"
+            ]
+        },
+        "demo-module|demo2.prop_5": {
+            "to": "prop_3",
+            "actions": [
+                "merge",
+                "unique"
+            ]
+        }
+    }
+}
