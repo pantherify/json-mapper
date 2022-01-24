@@ -28,7 +28,8 @@ const mapper = new StepMapperLogic(input_data, mapping_definition)
  * Test
  */
 const modules = mapper.get_mapping_modules()
-const mappings = mapper.get_module_mappings(modules[0])
+const _module = modules[1]
+const mappings = mapper.get_module_mappings(_module)
 
 const result = {}
 
@@ -36,6 +37,6 @@ const result = {}
 //     mapper.process_module_mapping(modules[0], mapping, result)
 // }
 
-mapper.process_module_mapping(modules[1], mappings[0], result)
+mapper.process_module_mapping(_module, mappings[0], result)
 
 console.log(result);

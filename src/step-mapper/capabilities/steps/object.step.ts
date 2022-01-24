@@ -31,8 +31,6 @@ export class ObjectStep extends BaseStep {
             return next_step.process()
         }
 
-        // console.log(this.converter)
-
         const converter = new this.converter(this.target)
         this.bag.output = converter.convert(property)
 
