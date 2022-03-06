@@ -1,0 +1,213 @@
+{
+  "nodes": [
+    {
+      "y": 4292305.7501438325,
+      "x": 491558.94980194967,
+      "osmid": 100,
+      "lon": -9.09718,
+      "lat": 38.77944
+    },
+    {
+      "y": 4292346.709711878,
+      "x": 491651.9331066382,
+      "osmid": 200,
+      "lon": -9.09611,
+      "lat": 38.77981
+    },
+    {
+      "y": 4292251.2317568,
+      "x": 491696.1317323921,
+      "osmid": 300,
+      "lon": -9.0956,
+      "lat": 38.77895
+    },
+    {
+      "y": 4292173.51779778,
+      "x": 491731.6637375844,
+      "osmid": 400,
+      "lon": -9.09519,
+      "lat": 38.77825
+    },
+    {
+      "y": 4292160.189127829,
+      "x": 491743.8105000198,
+      "osmid": 500,
+      "lon": -9.09505,
+      "lat": 38.77813
+    },
+    {
+      "y": 4291800.855112246,
+      "x": 491146.63579705014,
+      "osmid": 985948275,
+      "lon": -9.1019204,
+      "lat": 38.774886
+    },
+    {
+      "y": 4291791.079075702,
+      "x": 491017.9420363397,
+      "osmid": 3374604410,
+      "lon": -9.1034018,
+      "lat": 38.7747966
+    },
+    {
+      "y": 4291249.743874695,
+      "x": 491191.2298732974,
+      "osmid": 1,
+      "lon": -9.1014,
+      "lat": 38.76992
+    },
+    {
+      "y": 4291687.957270838,
+      "x": 491287.2690486772,
+      "osmid": 3,
+      "lon": -9.1003,
+      "lat": 38.77387
+    },
+    {
+      "y": 4291968.8569302745,
+      "x": 491148.5949793131,
+      "osmid": 5,
+      "lon": -9.1019,
+      "lat": 38.7764
+    },
+    {
+      "y": 4291787.964880001,
+      "x": 490975.2526857845,
+      "osmid": 3374604409,
+      "lon": -9.1038932,
+      "lat": 38.7747681
+    },
+    {
+      "y": 4291744.937874016,
+      "x": 490940.7353071911,
+      "osmid": 4,
+      "lon": -9.10429,
+      "lat": 38.77438
+    }
+  ],
+  "edges": [
+    {
+      "length": 120,
+      "surface_pipe": 0,
+      "inner_diameter_existing_grid_element": 0.3,
+      "costs_existing_grid_element": 10000,
+      "surface_type": "None",
+      "restriction": 0,
+      "existing_grid_element": 1,
+      "from": 100,
+      "to": 200
+    },
+    {
+      "length": 120,
+      "surface_pipe": 1,
+      "inner_diameter_existing_grid_element": 0.05,
+      "costs_existing_grid_element": 5000,
+      "surface_type": "None",
+      "restriction": 0,
+      "existing_grid_element": 1,
+      "from": 200,
+      "to": 300
+    },
+    {
+      "length": 10,
+      "surface_pipe": 0,
+      "inner_diameter_existing_grid_element": 0.5,
+      "costs_existing_grid_element": 0,
+      "surface_type": "None",
+      "restriction": 0,
+      "existing_grid_element": 1,
+      "from": 300,
+      "to": 400
+    },
+    {
+      "length": 300,
+      "surface_pipe": 0,
+      "inner_diameter_existing_grid_element": 0.1,
+      "costs_existing_grid_element": 500,
+      "surface_type": "None",
+      "restriction": 0,
+      "existing_grid_element": 1,
+      "from": 400,
+      "to": 500
+    },
+    {
+      "length": 696.2947265760635,
+      "surface_pipe": 0,
+      "inner_diameter_existing_grid_element": 0,
+      "costs_existing_grid_element": 0,
+      "surface_type": "street",
+      "restriction": 0,
+      "existing_grid_element": 0,
+      "from": 500,
+      "to": 985948275
+    },
+    {
+      "length": 128.805,
+      "surface_pipe": 0,
+      "inner_diameter_existing_grid_element": 0,
+      "costs_existing_grid_element": 0,
+      "surface_type": "street",
+      "restriction": 0,
+      "existing_grid_element": 0,
+      "from": 3374604410,
+      "to": 985948275
+    },
+    {
+      "length": 554.0346437516214,
+      "surface_pipe": 0,
+      "inner_diameter_existing_grid_element": 0,
+      "costs_existing_grid_element": 0,
+      "surface_type": "street",
+      "restriction": 0,
+      "existing_grid_element": 0,
+      "from": 1,
+      "to": 985948275
+    },
+    {
+      "length": 180.26521767987967,
+      "surface_pipe": 0,
+      "inner_diameter_existing_grid_element": 0,
+      "costs_existing_grid_element": 0,
+      "surface_type": "street",
+      "restriction": 0,
+      "existing_grid_element": 0,
+      "from": 3,
+      "to": 985948275
+    },
+    {
+      "length": 168.3586395649035,
+      "surface_pipe": 0,
+      "inner_diameter_existing_grid_element": 0,
+      "costs_existing_grid_element": 0,
+      "surface_type": "street",
+      "restriction": 0,
+      "existing_grid_element": 0,
+      "from": 5,
+      "to": 985948275
+    },
+    {
+      "length": 42.718,
+      "surface_pipe": 0,
+      "inner_diameter_existing_grid_element": 0,
+      "costs_existing_grid_element": 0,
+      "surface_type": "street",
+      "restriction": 0,
+      "existing_grid_element": 0,
+      "from": 3374604409,
+      "to": 3374604410
+    },
+    {
+      "length": 55.186828429665326,
+      "surface_pipe": 0,
+      "inner_diameter_existing_grid_element": 0,
+      "costs_existing_grid_element": 0,
+      "surface_type": "street",
+      "restriction": 0,
+      "existing_grid_element": 0,
+      "from": 4,
+      "to": 3374604409
+    }
+  ],
+  "demand_list": [3, 5, 4],
+  "supply_list": [1]
+}

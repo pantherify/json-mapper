@@ -1,0 +1,29 @@
+{
+  "platform": {
+    "group_of_sources": [
+      {
+        "id": 1,
+        "consumer_type": "non-household",
+        "location": [10, 10],
+        "streams": [
+          {
+            "id": 2,
+            "object_type": "stream",
+            "stream_type": "excess_heat",
+            "fluid": "flue_gas",
+            "capacity": 434,
+            "supply_temperature": 220,
+            "target_temperature": 120,
+            "hourly_generation": [1000, 1000, 1000]
+          }
+        ]
+      }
+    ]
+  },
+  "cf-module": {
+    "sink_group_grid_supply_temperature": 100,
+    "sink_group_grid_return_temperature": 70,
+    "last_iteration_data": null
+  },
+  "gis-module": {}
+}

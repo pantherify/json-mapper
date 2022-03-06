@@ -1,0 +1,76 @@
+{
+  "mappings": {
+    "demo-module|demo": {
+      "prop_1": "number",
+      "prop_2": "string",
+      "prop_3.prop_1": "number",
+      "prop_3": {
+        "prop_1": "string",
+        "prop_4": {
+          "foo": "number"
+        }
+      },
+      "prop_3.prop_4.bar": "string"
+    },
+    "demo-module|demo2": {
+      "prop_4": ["number"],
+      "prop_5": ["number"],
+      "prop_6[].prop_1": "number",
+      "prop_6[]": {
+        "prop_1": "number",
+        "prop_3": "string"
+      },
+      "prop_6[].prop_6[].prop_1": "string",
+      "prop_6[].prop_6[]": {
+        "prop_1": "number",
+        "prop_3": "string"
+      }
+    }
+  },
+  "namings": {
+    "demo-module|demo.prop_1": {
+      "to": "prop_1",
+      "actions": []
+    },
+    "demo-module|demo.prop_2": {
+      "to": "prop_2",
+      "actions": []
+    },
+    "demo-module|demo.prop_3.prop_4.bar": {
+      "to": "amazing",
+      "actions": []
+    },
+    "demo-module|demo.prop_3.prop_1": {
+      "to": "prop_3",
+      "actions": []
+    },
+    "demo-module|demo.prop_3": {
+      "to": "prop_4",
+      "actions": []
+    },
+    "demo-module|demo2.prop_4": {
+      "to": "prop_3",
+      "actions": ["unique"]
+    },
+    "demo-module|demo2.prop_5": {
+      "to": "prop_3",
+      "actions": []
+    },
+    "demo-module|demo2.prop_6[].prop_1": {
+      "to": "prop_5",
+      "actions": []
+    },
+    "demo-module|demo2.prop_6[]": {
+      "to": "prop_6",
+      "actions": ["unique"]
+    },
+    "demo-module|demo2.prop_6[].prop_6[].prop_1": {
+      "to": "inner_arrays",
+      "actions": ["flatten", "unique"]
+    },
+    "demo-module|demo2.prop_6[].prop_6[]": {
+      "to": "inner_objects",
+      "actions": ["flatten", "unique"]
+    }
+  }
+}

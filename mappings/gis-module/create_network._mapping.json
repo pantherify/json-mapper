@@ -1,0 +1,27 @@
+{
+  "mappings": {
+    "cf-module|cf:sink:convert_sinks": {
+      "n_demand_list": ["object"]
+    },
+    "cf-module|cf:source_detailed:convert_sources": {
+      "n_supply_list": ["object"]
+    },
+    "teo-module|buildmodel": {
+      "ex_capacities": ["object"]
+    }
+  },
+  "namings": {
+    "cf-module|cf:sink:convert_sinks.n_demand_list": {
+      "to": "n_demand_list",
+      "actions": []
+    },
+    "cf-module|cf:source_detailed:convert_sources.n_supply_list": {
+      "to": "n_supply_list",
+      "actions": []
+    },
+    "teo-module|buildmodel.ex_capacities": {
+      "to": "ex_cap",
+      "actions": []
+    }
+  }
+}

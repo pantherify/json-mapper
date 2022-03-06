@@ -1,0 +1,283 @@
+{
+  "all_sources_info": [
+    {
+      "source_id": 1,
+      "location": [10, 10],
+      "source_grid_supply_temperature": 100,
+      "source_grid_return_temperature": 70,
+      "streams_converted": [
+        {
+          "stream_id": 2,
+          "input_fuel": null,
+          "output_fuel": "excess_heat",
+          "output": 1,
+          "gis_capacity": 902.5,
+          "hourly_stream_capacity": [1000, 1000, 1000],
+          "teo_capacity_factor": [1, 1, 1],
+          "max_stream_capacity": 1000,
+          "conversion_technologies": [
+            {
+              "teo_equipment_name": "source-1-2-multiple_heat_exchanger",
+              "output": 1,
+              "input_fuel": "excess_heat",
+              "output_fuel": "dhn_water_supply",
+              "equipment": [
+                "hx_economizer",
+                "circulation_pumping",
+                "hx_plate",
+                "circulation_pumping"
+              ],
+              "max_capacity": 1000,
+              "turnkey_a": 57.461278958540504,
+              "turnkey_b": 6464.784308003727,
+              "conversion_efficiency": 0.9025,
+              "om_fix": 6.392606326654422,
+              "om_var": 0.000633861684114618,
+              "emissions": 0.000751789439298733,
+              "technologies": [
+                {
+                  "object_type": "equipment",
+                  "power": 1000,
+                  "available_power": 950,
+                  "hot_stream_T_hot": 220,
+                  "hot_stream_T_cold": 120,
+                  "cold_stream_T_hot": 105,
+                  "cold_stream_T_cold": 75,
+                  "equipment_sub_type": "hx_economizer",
+                  "u_value": 50,
+                  "global_conversion_efficiency": 0.95,
+                  "data_teo": {
+                    "equipment": "hx_economizer",
+                    "fuel_type": "none",
+                    "max_input_capacity": 1000,
+                    "turnkey_a": 44.65228182582802,
+                    "turnkey_b": 2590.665485335121,
+                    "conversion_efficiency": 0.95,
+                    "om_fix": 4.724294731116315,
+                    "om_var": 0,
+                    "emissions": 0
+                  }
+                },
+                {
+                  "object_type": "equipment",
+                  "equipment_sub_type": "circulation_pumping",
+                  "fuel_type": "electricity",
+                  "fuel_properties": {
+                    "price": 0.215,
+                    "lhv_fuel": "none",
+                    "excess_air_fuel": "none",
+                    "air_to_fuel_ratio": "none",
+                    "co2_emissions": 0.255,
+                    "density": "none"
+                  },
+                  "fluid": "thermal_oil",
+                  "supply_temperature": 105,
+                  "return_temperature": 75,
+                  "supply_capacity": 950,
+                  "global_conversion_efficiency": 1,
+                  "data_teo": {
+                    "equipment": "circulation_pumping",
+                    "fuel_type": "electricity",
+                    "max_input_capacity": 950,
+                    "turnkey_a": 5.696816891263845,
+                    "turnkey_b": 683.0222114626913,
+                    "conversion_efficiency": 1,
+                    "om_fix": 0.6415787640171942,
+                    "om_var": 0.0004973978613146266,
+                    "emissions": 0.0005899369983033944
+                  }
+                },
+                {
+                  "object_type": "equipment",
+                  "power": 950,
+                  "available_power": 902.5,
+                  "hot_stream_T_hot": 105,
+                  "hot_stream_T_cold": 75,
+                  "cold_stream_T_hot": 100,
+                  "cold_stream_T_cold": 70,
+                  "equipment_sub_type": "hx_plate",
+                  "u_value": 2000,
+                  "delta_T_lmtd": 5,
+                  "global_conversion_efficiency": 0.95,
+                  "data_teo": {
+                    "equipment": "hx_plate",
+                    "fuel_type": "none",
+                    "max_input_capacity": 950,
+                    "turnkey_a": 4.578050432288085,
+                    "turnkey_b": 2806.437651426072,
+                    "conversion_efficiency": 0.95,
+                    "om_fix": 0.7532195328526056,
+                    "om_var": 0,
+                    "emissions": 0
+                  }
+                },
+                {
+                  "object_type": "equipment",
+                  "equipment_sub_type": "circulation_pumping",
+                  "fuel_type": "electricity",
+                  "fuel_properties": {
+                    "price": 0.215,
+                    "lhv_fuel": "none",
+                    "excess_air_fuel": "none",
+                    "air_to_fuel_ratio": "none",
+                    "co2_emissions": 0.255,
+                    "density": "none"
+                  },
+                  "fluid": "water",
+                  "supply_temperature": 100,
+                  "return_temperature": 70,
+                  "supply_capacity": 902.5,
+                  "global_conversion_efficiency": 1,
+                  "data_teo": {
+                    "equipment": "circulation_pumping",
+                    "fuel_type": "electricity",
+                    "max_input_capacity": 902.5,
+                    "turnkey_a": 3.3771447926184526,
+                    "turnkey_b": 384.6589597798393,
+                    "conversion_efficiency": 1,
+                    "om_fix": 0.3803359706501931,
+                    "om_var": 0.00017876312007282294,
+                    "emissions": 0.00021202137497009234
+                  }
+                }
+              ]
+            },
+            {
+              "teo_equipment_name": "source-1-2-orc",
+              "output": 1,
+              "input_fuel": "excess_heat",
+              "output_fuel": "dhn_water_supply",
+              "equipment": [
+                "hx_economizer",
+                "circulation_pumping",
+                "orc",
+                "circulation_pumping"
+              ],
+              "max_capacity": 238.7,
+              "turnkey_a": 534.2425026395687,
+              "turnkey_b": 12124.830982574364,
+              "conversion_efficiency": 0.8133197623496436,
+              "electrical_conversion_efficiency": 0.05138386079644983,
+              "om_fix": 12.892292337047236,
+              "om_var": 0.00025492226461891075,
+              "emissions": 0.0003023496626875453,
+              "technologies": [
+                {
+                  "object_type": "equipment",
+                  "power": 238.7,
+                  "available_power": 226.765,
+                  "hot_stream_T_hot": 220,
+                  "hot_stream_T_cold": 165,
+                  "cold_stream_T_hot": 190,
+                  "cold_stream_T_cold": 160,
+                  "equipment_sub_type": "hx_economizer",
+                  "u_value": 50,
+                  "global_conversion_efficiency": 0.95,
+                  "data_teo": {
+                    "equipment": "hx_economizer",
+                    "fuel_type": "none",
+                    "max_input_capacity": 238.7,
+                    "turnkey_a": 62.82050535208109,
+                    "turnkey_b": 870.0045556219193,
+                    "conversion_efficiency": 0.95,
+                    "om_fix": 6.646526679163668,
+                    "om_var": 0,
+                    "emissions": 0
+                  }
+                },
+                {
+                  "object_type": "equipment",
+                  "equipment_sub_type": "circulation_pumping",
+                  "fuel_type": "electricity",
+                  "fuel_properties": {
+                    "price": 0.215,
+                    "lhv_fuel": "none",
+                    "excess_air_fuel": "none",
+                    "air_to_fuel_ratio": "none",
+                    "co2_emissions": 0.255,
+                    "density": "none"
+                  },
+                  "fluid": "water",
+                  "supply_temperature": 190,
+                  "return_temperature": 160,
+                  "supply_capacity": 226.765,
+                  "global_conversion_efficiency": 1,
+                  "data_teo": {
+                    "equipment": "circulation_pumping",
+                    "fuel_type": "electricity",
+                    "max_input_capacity": 226.765,
+                    "turnkey_a": 5.818281051246022,
+                    "turnkey_b": 166.51358891928635,
+                    "conversion_efficiency": 1,
+                    "om_fix": 0.6552581269177742,
+                    "om_var": 0.00014845104846849565,
+                    "emissions": 0.0001760698481835646
+                  }
+                },
+                {
+                  "object_type": "equipment",
+                  "fuel_type": "electricity",
+                  "equipment_sub_type": "orc",
+                  "supply_temperature": 105,
+                  "overall_thermal_capacity": 215.42674999999997,
+                  "electrical_generation": 11.069458133831597,
+                  "supply_capacity": 194.13942727285993,
+                  "data_teo": {
+                    "equipment": "orc",
+                    "fuel_type": "electricity",
+                    "max_eletrical_generation": 11.069458133831597,
+                    "max_input_capacity": 215.42674999999997,
+                    "turnkey_a": 510.76306817980645,
+                    "turnkey_b": 10939.766151004398,
+                    "conversion_efficiency": 0.9011853322433726,
+                    "electrical_conversion_efficiency": 0.05138386079644983,
+                    "om_fix": 5.615449053982782,
+                    "om_var": 0,
+                    "emissions": 0
+                  }
+                },
+                {
+                  "object_type": "equipment",
+                  "equipment_sub_type": "circulation_pumping",
+                  "fuel_type": "electricity",
+                  "fuel_properties": {
+                    "price": 0.215,
+                    "lhv_fuel": "none",
+                    "excess_air_fuel": "none",
+                    "air_to_fuel_ratio": "none",
+                    "co2_emissions": 0.255,
+                    "density": "none"
+                  },
+                  "fluid": "water",
+                  "supply_temperature": 100,
+                  "return_temperature": 70,
+                  "supply_capacity": 194.13942727285993,
+                  "global_conversion_efficiency": 1,
+                  "data_teo": {
+                    "equipment": "circulation_pumping",
+                    "fuel_type": "electricity",
+                    "max_input_capacity": 194.13942727285993,
+                    "turnkey_a": 6.062758443595789,
+                    "turnkey_b": 148.54668702875392,
+                    "conversion_efficiency": 1,
+                    "om_fix": 0.6827913101335528,
+                    "om_var": 0.00014003565860099847,
+                    "emissions": 0.00016608880438723073
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "teo_string": "dhn",
+  "input_fuel": "dh_water_supply",
+  "output_fuel": "dh_water_demand",
+  "output": 1,
+  "input": 1,
+  "n_supply_list": [
+    { "id": 1, "stream_id": 2, "coords": [10, 10], "cap": 902.5 }
+  ]
+}

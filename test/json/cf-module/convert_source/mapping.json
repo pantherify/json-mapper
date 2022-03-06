@@ -1,0 +1,23 @@
+{
+  "mappings": {
+    "cf-module|cf:sink:convert_sinks": {
+      "all_sinks_info": {
+        "sink_group_grid_supply_temperature": "float",
+        "sink_group_grid_return_temperature": "float"
+      }
+    },
+    "cf-module|cf:source_detailed:convert_sources": {
+      "all_sources_info": "object"
+    }
+  },
+  "namings": {
+    "cf-module|cf:sink:convert_sinks.all_sinks_info": {
+      "to": "cf-module",
+      "actions": []
+    },
+    "cf-module|cf:source_detailed:convert_sources.all_sources_info": {
+      "to": "cf-module.last_iteration_data",
+      "actions": []
+    }
+  }
+}
