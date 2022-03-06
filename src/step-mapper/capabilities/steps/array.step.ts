@@ -33,9 +33,12 @@ export class ArrayStep extends BaseStep {
 
       return next_step.process();
     }
-
-    const converter = new this.converter(this.target);
-    this.bag.output = converter.convert(property);
+    if (!!property) {
+      const converter = new this.converter(this.target);
+      this.bag.output = converter.convert(property);
+    } else {
+      this.bag.output = null;
+    }
 
     return this.bag;
   }

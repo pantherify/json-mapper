@@ -8,20 +8,18 @@ import { StepMapperLogic } from '../src/step-mapper/step-mapper.logic';
  * LOAD TEST DATA
  */
 const input_data = JSON.parse(
-  readFileSync(
-    join(__dirname, './json/cf-module/convert_source/input.json'),
-  ).toString(),
+  readFileSync(join(__dirname, './json/river_data.json')).toString(),
 );
 
 const platform_data = JSON.parse(
   readFileSync(
-    join(__dirname, './json/cf-module/convert_source/platform.json'),
+    join(__dirname, './json/cf-module/convert_sink/platform.json'),
   ).toString(),
 );
 
 const mapping_data = JSON.parse(
   readFileSync(
-    join(__dirname, './json/cf-module/convert_source/mapping.json'),
+    join(__dirname, './json/cf-module/convert_sink/mapping.json'),
   ).toString(),
 );
 

@@ -1,5 +1,5 @@
 export interface MappingDto {
-  input_data: object;
+  river_data: object;
   mapping: object;
   bag: object;
 }

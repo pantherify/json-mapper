@@ -13,7 +13,7 @@ export class StepMapperController {
       information.mapping,
     );
     const mapper = new StepMapperLogic(
-      information.input_data,
+      information.river_data,
       mapping_definition,
     );
 
