@@ -3,8 +3,14 @@
     "cf-module|cf:sink:convert_sinks": {
       "all_sinks_info.grid_specific.heating[].teo_equipment_name": "string",
       "all_sinks_info.grid_specific.heating[].input_fuel": "string",
-      "all_sinks_info.grid_specific.heating[].output_fuel": "string",
-      "all_sinks_info.grid_specific.heating[].technologies[].object_type": "string"
+      "all_sinks_info.grid_specific.heating[].output_fuel": "string"
+    },
+    "cf-module|cf:source_detailed:convert_sources": {
+      "teo_string": "string",
+      "input_fuel": "string",
+      "output_fuel": "string",
+      "output": "number",
+      "input": "number"
     }
   },
   "namings": {
@@ -14,15 +20,31 @@
     },
     "cf-module|cf:sink:convert_sinks.all_sinks_info.grid_specific.heating[].input_fuel": {
       "to": "cf-module.sets_fuels",
-      "actions": []
+      "actions": ["not-null"]
     },
     "cf-module|cf:sink:convert_sinks.all_sinks_info.grid_specific.heating[].output_fuel": {
       "to": "cf-module.sets_fuels_0",
+      "actions": ["merge:cf-module.sets_fuels", "xunique:cf-module.sets_fuels"]
+    },
+    "cf-module|cf:source_detailed:convert_sources.teo_string": {
+      "to": "cf-module.sets_technologies_0",
+      "actions": ["unflatten", "merge:cf-module.sets_technologies"]
+    },
+    "cf-module|cf:source_detailed:convert_sources.input_fuel": {
+      "to": "cf-module.sets_fuels_0",
+      "actions": ["unflatten", "merge:cf-module.sets_fuels"]
+    },
+    "cf-module|cf:source_detailed:convert_sources.output_fuel": {
+      "to": "cf-module.sets_fuels_0",
+      "actions": ["unflatten", "merge:cf-module.sets_fuels"]
+    },
+    "cf-module|cf:source_detailed:convert_sources.output": {
+      "to": "output",
       "actions": []
     },
-    "cf-module|cf:sink:convert_sinks.all_sinks_info.grid_specific.heating[].technologies[].object_type": {
-      "to": "demo",
-      "actions": ["flatten", "unique"]
+    "cf-module|cf:source_detailed:convert_sources.input": {
+      "to": "input",
+      "actions": []
     }
   }
 }

@@ -1,17 +1,37 @@
 import { get as _get, set as _set } from 'lodash';
 
 export abstract class BaseAction {
-  constructor(protected input_data: any, protected path: string) {}
+  constructor(
+    protected action: string,
+    protected bag: any,
+    protected path: string,
+  ) {}
 
   abstract input_valid(): boolean;
 
   abstract run(): any;
 
-  get target_data(): any {
-    return _get(this.input_data, this.path);
+  get action_data(): any {
+    return _get(this.bag, this.path);
   }
 
-  set target_data(value) {
-    _set(this.input_data, this.path, value);
+  set action_data(value) {
+    _set(this.bag, this.path, value);
+  }
+
+  get to_data() {
+    return _get(this.bag, this.to_key);
+  }
+
+  set to_data(value) {
+    _set(this.bag, this.to_key, value);
+  }
+
+  get to_key() {
+    const actionParams = this.action.split(':');
+    if (actionParams.length < 2)
+      throw new Error('Action Merge not well defined!');
+
+    return actionParams[1];
   }
 }

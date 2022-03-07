@@ -57,7 +57,10 @@ export class StepMapperLogic {
 
     for (const _action of naming.actions) {
       const action_class = ActionUtilities.get_action_class(_action);
-      const action = new action_class(result, naming.to);
+      if (action_class == null)
+        throw new Error(`Action Class ${_action} not found!`);
+
+      const action = new action_class(_action, result, naming.to);
 
       if (!action.input_valid())
         throw new Error('Action Not Valid for this type of object');
