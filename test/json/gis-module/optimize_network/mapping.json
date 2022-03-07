@@ -1,0 +1,49 @@
+{
+  "mappings": {
+    "cf-module|cf:sink:convert_sinks": {
+      "n_demand_list": ["object"]
+    },
+    "cf-module|cf:source_detailed:convert_sources": {
+      "n_supply_list": ["object"]
+    },
+    "teo-module|buildmodel": {
+      "ex_capacities": ["object"]
+    },
+    "gis-module|gis:create_network": {
+      "nodes": ["object"],
+      "edges": ["object"],
+      "demand_list": ["number"],
+      "supply_list": ["number"]
+    }
+  },
+  "namings": {
+    "cf-module|cf:sink:convert_sinks.n_demand_list": {
+      "to": "cf-module.n_demand_list",
+      "actions": []
+    },
+    "cf-module|cf:source_detailed:convert_sources.n_supply_list": {
+      "to": "cf-module.n_supply_list",
+      "actions": []
+    },
+    "teo-module|buildmodel.ex_capacities": {
+      "to": "teo-module.ex_cap",
+      "actions": []
+    },
+    "gis-module|gis:create_network.nodes": {
+      "to": "gis-module.nodes",
+      "actions": []
+    },
+    "gis-module|gis:create_network.edges": {
+      "to": "gis-module.edges",
+      "actions": []
+    },
+    "gis-module|gis:create_network.demand_list": {
+      "to": "gis-module.demand_list",
+      "actions": []
+    },
+    "gis-module|gis:create_network.supply_list": {
+      "to": "gis-module.supply_list",
+      "actions": []
+    }
+  }
+}

@@ -12,15 +12,11 @@ const input_data = JSON.parse(
 );
 
 const platform_data = JSON.parse(
-  readFileSync(
-    join(__dirname, './json/cf-module/convert_sink/platform.json'),
-  ).toString(),
+  readFileSync(join(__dirname, './json/teo-module/platform.json')).toString(),
 );
 
 const mapping_data = JSON.parse(
-  readFileSync(
-    join(__dirname, './json/cf-module/convert_sink/mapping.json'),
-  ).toString(),
+  readFileSync(join(__dirname, './json/teo-module/mapping.json')).toString(),
 );
 
 /**

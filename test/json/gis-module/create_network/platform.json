@@ -1,0 +1,53 @@
+{
+  "ex_grid": [
+    {
+      "from": 100,
+      "lon_from": -9.09718,
+      "lat_from": 38.77944,
+      "to": 200,
+      "lon_to": -9.09611,
+      "lat_to": 38.77981,
+      "dn": 0.3,
+      "total_costs": 10000,
+      "length": 120,
+      "surface_pipe": 0
+    },
+    {
+      "from": 200,
+      "lon_from": -9.09611,
+      "lat_from": 38.77981,
+      "to": 300,
+      "lon_to": -9.0956,
+      "lat_to": 38.77895,
+      "dn": 0.05,
+      "total_costs": 5000,
+      "length": 120,
+      "surface_pipe": 1
+    },
+    {
+      "from": 300,
+      "lon_from": -9.0956,
+      "lat_from": 38.77895,
+      "to": 400,
+      "lon_to": -9.09519,
+      "lat_to": 38.77825,
+      "dn": 0.5,
+      "total_costs": 0,
+      "length": 10,
+      "surface_pipe": 0
+    },
+    {
+      "from": 400,
+      "lon_from": -9.09519,
+      "lat_from": 38.77825,
+      "to": 500,
+      "lon_to": -9.09505,
+      "lat_to": 38.77813,
+      "dn": 0.1,
+      "total_costs": 500,
+      "length": 300,
+      "surface_pipe": 0
+    }
+  ],
+  "network_resolution": "low"
+}

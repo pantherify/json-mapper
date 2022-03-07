@@ -37,11 +37,14 @@ export class StepMapperLogic {
     const naming_path = this.get_naming_path(module, mapping);
     const naming = this.definitions.namings[naming_path];
 
+    if (!naming) {
+      throw new Error(`Naming : "${naming_path}" not found`);
+    }
+
     let { output } = start.process();
 
-    if (naming.actions.length) output = this.run_actions(naming, output);
-
     set(bag, naming.to, output);
+    if (naming.actions.length) bag = this.run_actions(naming, bag);
 
     return bag;
   }
@@ -49,12 +52,12 @@ export class StepMapperLogic {
   private get_naming_path = (module: string, mapping: string) =>
     `${module}.${mapping}`;
 
-  private run_actions(naming: NamingProp, input: any): any {
-    let result = input;
+  private run_actions(naming: NamingProp, bag: any): any {
+    let result = bag;
 
     for (const _action of naming.actions) {
       const action_class = ActionUtilities.get_action_class(_action);
-      const action = new action_class(result);
+      const action = new action_class(result, naming.to);
 
       if (!action.input_valid())
         throw new Error('Action Not Valid for this type of object');

@@ -1,0 +1,28 @@
+{
+  "mappings": {
+    "cf-module|cf:sink:convert_sinks": {
+      "all_sinks_info.grid_specific.heating[].teo_equipment_name": "string",
+      "all_sinks_info.grid_specific.heating[].input_fuel": "string",
+      "all_sinks_info.grid_specific.heating[].output_fuel": "string",
+      "all_sinks_info.grid_specific.heating[].technologies[].object_type": "string"
+    }
+  },
+  "namings": {
+    "cf-module|cf:sink:convert_sinks.all_sinks_info.grid_specific.heating[].teo_equipment_name": {
+      "to": "cf-module.sets_technologies",
+      "actions": []
+    },
+    "cf-module|cf:sink:convert_sinks.all_sinks_info.grid_specific.heating[].input_fuel": {
+      "to": "cf-module.sets_fuels",
+      "actions": []
+    },
+    "cf-module|cf:sink:convert_sinks.all_sinks_info.grid_specific.heating[].output_fuel": {
+      "to": "cf-module.sets_fuels_0",
+      "actions": []
+    },
+    "cf-module|cf:sink:convert_sinks.all_sinks_info.grid_specific.heating[].technologies[].object_type": {
+      "to": "demo",
+      "actions": ["flatten", "unique"]
+    }
+  }
+}
