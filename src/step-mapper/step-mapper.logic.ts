@@ -62,7 +62,12 @@ export class StepMapperLogic {
       if (action_class == null)
         throw new Error(`Action Class ${_action} not found!`);
 
-      const action = new action_class(_action, result, naming.to);
+      const action = new action_class(
+        _action,
+        result,
+        naming.to,
+        this.definitions,
+      );
 
       if (!action.input_valid())
         throw new Error('Action Not Valid for this type of object');
@@ -73,3 +78,4 @@ export class StepMapperLogic {
     return result;
   }
 }
+7;

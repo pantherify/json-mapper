@@ -20,9 +20,7 @@
         "conversion_efficiency": "number",
         "om_fix": "number",
         "om_var": "number",
-        "emissions": "#1",
-        "emission_factor": "$co2",
-        "test": "{cf-module.sets_fuels}"
+        "emissions": "number"
       }
     }
   },
@@ -53,7 +51,21 @@
     },
     "cf-module|cf:source_detailed:convert_sources.all_sources_info[].streams_converted[].conversion_technologies[]": {
       "to": "cf-module.technologies_cf",
-      "actions": ["flatten", "flatten"]
+      "actions": [
+        "flatten",
+        "flatten",
+        "rename:rename_technologies_cf",
+        "normalize:normalize_technologies_cf"
+      ]
+    }
+  },
+  "refs": {
+    "rename_technologies_cf": {
+      "teo_equipment_name": "technology",
+      "emissions": "emission_factor"
+    },
+    "normalize_technologies_cf": {
+      "emissions": "$co2"
     }
   }
 }

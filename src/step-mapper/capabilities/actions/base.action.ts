@@ -1,10 +1,13 @@
 import { get as _get, set as _set } from 'lodash';
 
+import { MappingDefinition } from '../../models/mapping-definition.model';
+
 export abstract class BaseAction {
   constructor(
     protected action: string,
     protected bag: any,
     protected path: string,
+    protected definitions: MappingDefinition,
   ) {}
 
   abstract input_valid(): boolean;
@@ -33,5 +36,9 @@ export abstract class BaseAction {
       throw new Error('Action Merge not well defined!');
 
     return actionParams[1];
+  }
+
+  get refs(): any {
+    return this.definitions.refs[this.to_key];
   }
 }
