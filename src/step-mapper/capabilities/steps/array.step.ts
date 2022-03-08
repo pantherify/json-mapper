@@ -34,7 +34,7 @@ export class ArrayStep extends BaseStep {
       return next_step.process();
     }
     if (!!property) {
-      const converter = new this.converter(this.target);
+      const converter = new this.converter(this.target, this.bag);
       this.bag.output = converter.convert(property);
     } else {
       this.bag.output = null;

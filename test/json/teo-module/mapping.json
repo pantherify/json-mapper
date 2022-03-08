@@ -9,8 +9,21 @@
       "teo_string": "string",
       "input_fuel": "string",
       "output_fuel": "string",
-      "output": "number",
-      "input": "number"
+
+      "all_sources_info[].streams_converted[].conversion_technologies[]": {
+        "teo_equipment_name": "string",
+        "output": "number",
+        "input_fuel": "string",
+        "output_fuel": "string",
+        "max_capacity": "number",
+        "turnkey_a": "number",
+        "conversion_efficiency": "number",
+        "om_fix": "number",
+        "om_var": "number",
+        "emissions": "#1",
+        "emission_factor": "$co2",
+        "test": "{cf-module.sets_fuels}"
+      }
     }
   },
   "namings": {
@@ -38,13 +51,9 @@
       "to": "cf-module.sets_fuels_0",
       "actions": ["unflatten", "merge:cf-module.sets_fuels"]
     },
-    "cf-module|cf:source_detailed:convert_sources.output": {
-      "to": "output",
-      "actions": []
-    },
-    "cf-module|cf:source_detailed:convert_sources.input": {
-      "to": "input",
-      "actions": []
+    "cf-module|cf:source_detailed:convert_sources.all_sources_info[].streams_converted[].conversion_technologies[]": {
+      "to": "cf-module.technologies_cf",
+      "actions": ["flatten", "flatten"]
     }
   }
 }

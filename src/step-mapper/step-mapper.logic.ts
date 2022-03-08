@@ -1,4 +1,4 @@
-import { set } from 'lodash';
+import { set, unset } from 'lodash';
 
 import { ActionUtilities } from './capabilities/actions/utilities';
 import { StartStep } from './capabilities/steps/start.step';
@@ -32,7 +32,7 @@ export class StepMapperLogic {
 
     const steps = [module, ...mapping.split('.')];
 
-    const start = new StartStep(steps, {}, this.input_data, converter, target);
+    const start = new StartStep(steps, bag, this.input_data, converter, target);
 
     const naming_path = this.get_naming_path(module, mapping);
     const naming = this.definitions.namings[naming_path];
@@ -45,6 +45,8 @@ export class StepMapperLogic {
 
     set(bag, naming.to, output);
     if (naming.actions.length) bag = this.run_actions(naming, bag);
+
+    unset(bag, 'output');
 
     return bag;
   }

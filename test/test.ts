@@ -44,5 +44,5 @@ for (const module of modules) {
 }
 
 console.dir(result, {
-  depth: 3,
+  depth: 4,
 });
